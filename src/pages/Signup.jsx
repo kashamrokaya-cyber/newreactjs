@@ -1,45 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Login = () => {
-
-   const[data,setData]=useState({
-    email:"",
-    password:"",
-   });
-
-
-
-   const  handleChange=(e)=>{
-   
-    const value=e.target.value;
-    
-      setData({...data,[value]:value})
-   }
-
-
-   const handleSubmit=(e)=>{
-    e.preventDefault();
-       
-
-     if(!data.email||!data.password){
-      alert("all are required")
-      return;
-     }
-setData({
-  email:"",
-  password:""
-})
-    
-    
-   }
-
-
-
+const Signup = () => {
   return (
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-  
-
-  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+    <>
+    
+    
+     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
     <form onSubmit={handleSubmit}  class="space-y-6">
       <div>
         <label  class="block text-sm/6 font-medium text-black">Email address</label>
@@ -64,8 +30,9 @@ setData({
     </form>
 
   </div>
-</div>
+    
+    </>
   )
 }
 
-export default Login
+export default Signup
