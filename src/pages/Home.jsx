@@ -2,6 +2,7 @@ import React from 'react'
 import pic from '../assets/homeimage.jpg'
 import Slider from '../components/Slider'
 import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'
+import Footer from '../components/Footer'
 const Home = () => {
   const socilaLinks=[
     {
@@ -48,6 +49,7 @@ const Home = () => {
 
 
       </div>
+      <Footer/>
 
 
     </>

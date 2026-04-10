@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className='flex justify-between items-center mx-2'>
                 <NavLink to='/' className='flex items-center md:flex-row gap-1 '>
                     <img src="/Logo.jpg" alt="logo" className='w-20 h-20 rounded-[50%]' />
-                    <h1 className='text-3xl'>Food Home</h1>
+                    <h1 className='text-3xl'>Green Nepal</h1>
                 </NavLink>
                 <button className='md:hidden text-2xl font-bold bg-blue-500 text-white px-2 py-2 hover:scale-105 duration-500 ease-initial ' onClick={()=>setOpen(!open)}>
                    {open?<HiOutlineX/>:<HiOutlineMenu/>}

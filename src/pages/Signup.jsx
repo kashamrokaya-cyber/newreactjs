@@ -1,36 +1,58 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 const Signup = () => {
+  const [data, setData] = useState({
+    fullname: "",
+    email: "",
+    password: "",
+    password: ""
+  });
+
+
+
+  const handleChange = (e) => {
+
+    const { name, value } = e.target;
+
+    setData({ ...data, [name]: value })
+  }
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!data.fullname || !data.email || !data.password || !data.password) {
+      alert("required all data")
+      return;
+    }
+
+    setData({
+      fullname: "",
+      email: "",
+      password: "",
+      password: ""
+    })
+
+
+  }
+
   return (
     <>
-    
-    
-     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form onSubmit={handleSubmit}  class="space-y-6">
-      <div>
-        <label  class="block text-sm/6 font-medium text-black">Email address</label>
-        <div class="mt-2">
-          <input id="email" value={data.email} type="email" name="email"  onChange={handleChange} className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+      <div className=' bg-green-400 h-[90vh] px-4 flex justify-center items-center'>
+        <div className='w-full rounded-3xl bg-white max-w-xl p-8'>
+          <h1 className='font-bold text-3xl text-center mb-6'>SignUp</h1>
+
+          <form className='space-y-4 ' onSubmit={handleSubmit} >
+            <input name='fullname' value={data.fullname} onChange={handleChange} type="text" placeholder='Fullname' className='w-full px-4 py-3 rounded-xl border border-gray-400 outline-none hover:border-green-400' />
+            <input name='email' value={data.email} onChange={handleChange} type="email" placeholder='Email' className='w-full px-4 py-3 rounded-xl border border-gray-400 outline-none hover:border-green-400' />
+            <input name='password' value={data.password} onChange={handleChange} type="password" placeholder='Passowrd' className='w-full px-4 py-3 rounded-xl border border-gray-400 outline-none hover:border-green-400' />
+            <input name='password' value={data.password} onChange={handleChange} type="password" placeholder='Conform password' className='w-full px-4 py-3 rounded-xl border border-gray-400 outline-none hover:border-green-400' />
+
+            <button className='bg-green-400 w-full py-2.5  rounded-xl hover:bg-green-700  transition duratision-500 ease-in-out ' type='submit'> Send Message</button>
+            <p>I have already an account. <Link className=" text-blue-500" to="/login">Login</Link></p>
+          </form>
+          
         </div>
       </div>
-
-      <div>
-        <div class="flex items-center justify-between">
-          <label  class="block text-sm/6 font-medium text-black">Password</label>
-       
-        </div>
-        <div class="mt-2">
-          <input id="password" type="password" value={data.password} name="password" onChange={handleChange}  className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
-        </div>
-      </div>
-
-      <div>
-        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-black hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Sign in</button>
-      </div>
-    </form>
-
-  </div>
-    
     </>
   )
 }
