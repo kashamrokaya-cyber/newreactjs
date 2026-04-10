@@ -9,18 +9,11 @@ const Login = () => {
     email: "",
     password: "",
   });
-
-
-
-  const handleChange = (e) => {
-
+    const handleChange = (e) => {
     const { name, value } = e.target;
-
     setData({ ...data, [name]: value })
   }
-
-
-  const handleSubmit = (e) => {
+    const handleSubmit = (e) => {
     e.preventDefault();
     if (!data.email || !data.password) {
       alert("all are required");

@@ -13,15 +13,15 @@ const About = () => {
           
           
           
-          <div className=' gap-5 md:flex-row flex flex-col'>
+          <div className=' gap-5 md:flex-row   flex flex-col'>
 
-            <div className='  border-2 w-1/2 h-50 rounded-3xl bg-green-50 border-green-400 '>
+            <div className='border-2  h-40 rounded-3xl bg-green-50 border-green-400 '>
               <h1 className='text-green-500 text-2xl mx-5 my-5 max-w-2xl' >Our Mission</h1>
               <p className='mx-5'>To promote a greener lifestyle by providing sustainable,affordable,and healthy plants for everyone.</p>
             </div>
 
-            <div className='w-1/2  border-2 rounded-3xl bg-green-50 border-green-400'>
-              <h1 className='text-green-500 mx-5 my-5 text-2xl font-bold '>Why choose us</h1>
+            <div className='border-2 h-40 rounded-3xl bg-green-50 border-green-400'>
+              <h1 className='text-green-500 mx-5 my-5 text-2xl  font-bold '>Why choose us</h1>
               <p className='mx-5'>To promote a greener lifestyle by providing sustainable,affordable,and healthy plants for everyone.</p>
             </div>
           </div>
