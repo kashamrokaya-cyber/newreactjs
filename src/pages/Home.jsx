@@ -26,7 +26,7 @@ const Home = () => {
         <div className='flex md:flex-row flex-col'>
           <div className='px-5 py-12 items-center md:w-1/2  '>
             <h2 className='pt-30 font-bold text-green-400 text-3xl'>Welcome to my website</h2>
-            <p className='md:text-xl text-justify text-gray-400 text-2xl '>All are related in nature </p>
+            <p className='md:text-xl text-justify text-black text-2xl '>All are related in nature </p>
             <div className='flex gap-6 mr-40'>
               {
                 socilaLinks.map((link,index)=>(
